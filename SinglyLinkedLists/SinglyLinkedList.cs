@@ -35,9 +35,18 @@ namespace SinglyLinkedLists
             throw new NotImplementedException();
         }
 
+        private SinglyLinkedListNode firstNode;
+
         public void AddLast(string value)
         {
-            throw new NotImplementedException();
+            if (firstNode == null)
+            {
+                firstNode = new SinglyLinkedListNode(value);
+            }
+            else
+            {
+                //Actually attach new notes to the end of the list
+            }
         }
 
         // NOTE: There is more than one way to accomplish this.  One is O(n).  The other is O(1).
@@ -53,8 +62,16 @@ namespace SinglyLinkedLists
 
         public string First()
         {
-            throw new NotImplementedException();
+            if (null == firstNode )
+            {
+                return null;
+            }
+            else
+            {
+                return firstNode.Value;
+            }
         }
+            
 
         public int IndexOf(string value)
         {
